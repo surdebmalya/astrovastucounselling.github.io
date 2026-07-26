@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Registration | Mobile Numerology Webinar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
+            s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1467019555437463');
+    </script>
+    <style>
+        body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: radial-gradient(circle at 50% 0%, #32105c, #080414 55%, #04020c); color: #fff; min-height: 100vh; }
+        .card { background: rgba(16, 8, 38, .78); border: 1px solid rgba(246, 201, 79, .28); box-shadow: 0 28px 70px rgba(0,0,0,.5); }
+        .cta { background: linear-gradient(135deg, #fff1a5, #e8ae20 40%, #ffda59 65%, #a86a08); color: #170a02; box-shadow: 0 12px 30px rgba(232,174,32,.28); transition: transform .2s ease; }
+        .cta:hover { transform: translateY(-2px); }
+        .count { background: radial-gradient(circle at 35% 28%, #fff4b4, #e9b52f 48%, #76430c); color: #170a02; box-shadow: 0 0 36px rgba(245, 190, 50, .4); }
+    </style>
+</head>
+
+<body>
+    <script>fbq('trackCustom', 'redirection-page-view');</script>
+    <main class="flex min-h-screen items-center justify-center p-4">
+        <section class="card w-full max-w-xl rounded-3xl p-7 text-center sm:p-12">
+            <p class="text-sm font-bold tracking-[.18em] text-yellow-300">MOBILE NUMEROLOGY · FREE WEBINAR</p>
+            <h1 class="mt-4 text-3xl font-black sm:text-4xl">Your registration link is opening</h1>
+            <p class="mt-4 text-base leading-relaxed text-violet-100/85">Please wait a few seconds. You will be taken to the WhatsApp group to join the free Bengali live class on 16<sup>th</sup> August 2026 at 8:30 PM.</p>
+            <div id="countdown" class="count mx-auto mt-8 flex h-28 w-28 items-center justify-center rounded-full text-5xl font-black">3</div>
+            <p id="statusText" class="mt-5 font-semibold text-yellow-200">Redirecting in 3 seconds...</p>
+            <a href="https://chat.whatsapp.com/EQuTgU7tFs8Je0VsJvYAbQ" class="cta mt-8 inline-flex rounded-xl px-7 py-4 text-lg font-black">JOIN THE WHATSAPP GROUP NOW</a>
+            <p class="mt-5 text-sm text-violet-200">If the redirect does not start, use the button above.</p>
+        </section>
+    </main>
+    <script>
+        const targetUrl = 'https://chat.whatsapp.com/EQuTgU7tFs8Je0VsJvYAbQ';
+        const countdownElement = document.getElementById('countdown');
+        const statusText = document.getElementById('statusText');
+        let timeLeft = 2;
+        const tick = () => {
+            countdownElement.textContent = timeLeft;
+            statusText.textContent = `Redirecting in ${timeLeft} second${timeLeft === 1 ? '' : 's'}...`;
+            if (timeLeft === 0) { statusText.textContent = 'Opening WhatsApp now...'; window.location.href = targetUrl; return; }
+            timeLeft -= 1;
+            setTimeout(tick, 1000);
+        };
+        tick();
+    </script>
+</body>
+</html>
