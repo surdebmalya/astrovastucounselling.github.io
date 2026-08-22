@@ -236,8 +236,8 @@
 
         .review-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
             margin-top: 1.25rem;
         }
 
@@ -262,6 +262,7 @@
 
         .review-caption {
             color: rgba(248, 240, 220, 0.84);
+            line-height: 1.35;
         }
 
         .review-caption span {
@@ -288,15 +289,15 @@
         }
 
         .image-review-grid {
-            columns: 1;
-            column-gap: 1rem;
+            columns: 2;
+            column-gap: 0.75rem;
             margin-top: 1.25rem;
         }
 
         .image-review-card {
             display: inline-block;
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             padding: 0.55rem;
             border-radius: 1rem;
             background:
@@ -382,14 +383,28 @@
         }
 
         @media (min-width: 40rem) {
+            .review-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 1rem;
+            }
+
             .image-review-grid {
-                columns: 2;
+                columns: 3;
+                column-gap: 1rem;
+            }
+
+            .image-review-card {
+                margin-bottom: 1rem;
             }
         }
 
         @media (min-width: 64rem) {
+            .review-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
             .image-review-grid {
-                columns: 3;
+                columns: 4;
             }
         }
 
