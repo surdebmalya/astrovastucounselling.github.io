@@ -22,6 +22,8 @@
         fbq('init', '1467019555437463');
     </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
         body {
             font-family: 'Poppins', sans-serif;
             background:
@@ -73,6 +75,96 @@
 
         .status-text {
             color: #f59e0b;
+        }
+
+        /* Matches the midnight-and-gold astrology poster without changing layout utilities. */
+        :root {
+            --night: #050914;
+            --midnight: #0a1020;
+            --gold: #f4c75d;
+            --soft-gold: #ffe5a0;
+            --paper: #f8f0dc;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+            background:
+                radial-gradient(ellipse at 50% 3%, rgba(205, 147, 42, 0.2), transparent 30%),
+                radial-gradient(ellipse at 100% 80%, rgba(105, 46, 12, 0.16), transparent 31%),
+                linear-gradient(145deg, #050812 0%, #0a1020 48%, #080b14 100%);
+            color: var(--paper);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.55;
+            background-image:
+                radial-gradient(circle at 8% 12%, rgba(255, 211, 102, 0.9) 0 0.04rem, transparent 0.11rem),
+                radial-gradient(circle at 72% 19%, rgba(255, 211, 102, 0.7) 0 0.04rem, transparent 0.12rem),
+                radial-gradient(circle at 92% 72%, rgba(255, 211, 102, 0.6) 0 0.04rem, transparent 0.12rem);
+            background-size: 17rem 19rem, 23rem 21rem, 29rem 25rem;
+        }
+
+        header {
+            background: rgba(5, 9, 20, 0.9) !important;
+            border-bottom-color: rgba(244, 199, 93, 0.24);
+            box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.36) !important;
+            backdrop-filter: blur(1rem);
+        }
+
+        .premium-gold-cta {
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 36%),
+                linear-gradient(135deg, #60350a 0%, #b87926 24%, #f7d66f 52%, #c48423 78%, #6c3f0b 100%);
+            color: #241404;
+            border-color: rgba(255, 229, 160, 0.68);
+            text-shadow: 0 1px rgba(255, 239, 183, 0.38);
+        }
+
+        .redirect-card {
+            background:
+                linear-gradient(135deg, rgba(255, 226, 147, 0.08), transparent 28%),
+                rgba(7, 12, 25, 0.86);
+            border-color: rgba(244, 199, 93, 0.3);
+            box-shadow:
+                0 1.5rem 3.75rem rgba(0, 0, 0, 0.48),
+                0 0 3.75rem rgba(184, 121, 38, 0.08),
+                inset 0 1px 0 rgba(255, 238, 190, 0.1);
+        }
+
+        .count-circle {
+            background:
+                radial-gradient(circle at 30% 25%, #fff0ae, #f4c75d 27%, #bb7620 58%, #6b3d0a 100%);
+            color: #251505;
+            border-color: rgba(255, 235, 168, 0.7);
+            box-shadow:
+                0 1.125rem 2.5rem rgba(215, 156, 31, 0.3),
+                0 0 2rem rgba(244, 199, 93, 0.15),
+                inset 0 2px 0.625rem rgba(255, 255, 255, 0.35);
+        }
+
+        .status-text {
+            color: var(--soft-gold);
+            text-shadow: 0 0 1.25rem rgba(244, 199, 93, 0.25);
+        }
+
+        .redirect-card > p:first-child {
+            color: #e8c370 !important;
+        }
+
+        .redirect-card h1 {
+            color: var(--soft-gold);
+            font-family: 'Playfair Display', 'Hind Siliguri', serif;
+            line-height: 1.3;
+            text-shadow: 0 0.2rem 1.4rem rgba(236, 180, 68, 0.2);
+        }
+
+        .redirect-card h1 + p {
+            color: rgba(248, 240, 220, 0.78) !important;
         }
     </style>
 </head>

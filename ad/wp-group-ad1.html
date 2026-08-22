@@ -22,6 +22,8 @@
         fbq('init', '1467019555437463');
     </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #1a202c;
@@ -81,6 +83,336 @@
             flex-shrink: 0;
             color: #25d366;
         }
+
+        /* Poster-led visual treatment — existing layout and pixel utilities are preserved. */
+        :root {
+            --night: #050914;
+            --midnight: #0a1020;
+            --gold: #f4c75d;
+            --soft-gold: #ffe5a0;
+            --paper: #f8f0dc;
+            --copper: #b87926;
+            --whatsapp: #25d366;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+            background:
+                radial-gradient(ellipse at 50% 7%, rgba(205, 147, 42, 0.16), transparent 29%),
+                radial-gradient(ellipse at 0% 52%, rgba(105, 46, 12, 0.16), transparent 28%),
+                linear-gradient(145deg, #050812 0%, #0a1020 48%, #080b14 100%);
+            color: var(--paper);
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.55;
+            background-image:
+                radial-gradient(circle at 8% 12%, rgba(255, 211, 102, 0.9) 0 0.04rem, transparent 0.11rem),
+                radial-gradient(circle at 72% 19%, rgba(255, 211, 102, 0.7) 0 0.04rem, transparent 0.12rem),
+                radial-gradient(circle at 92% 72%, rgba(255, 211, 102, 0.6) 0 0.04rem, transparent 0.12rem);
+            background-size: 17rem 19rem, 23rem 21rem, 29rem 25rem;
+        }
+
+        header {
+            background: rgba(5, 9, 20, 0.9) !important;
+            border-bottom-color: rgba(244, 199, 93, 0.24);
+            box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.36) !important;
+            backdrop-filter: blur(1rem);
+        }
+
+        main h2 {
+            color: var(--soft-gold);
+            font-family: 'Playfair Display', 'Hind Siliguri', serif;
+            line-height: 1.35;
+            text-shadow: 0 0.2rem 1.4rem rgba(236, 180, 68, 0.2);
+        }
+
+        main > div > a > img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-color: rgba(244, 199, 93, 0.5);
+            box-shadow:
+                0 1.5rem 3.75rem rgba(0, 0, 0, 0.5),
+                0 0 0 0.3rem rgba(244, 199, 93, 0.07),
+                0 0 2.8rem rgba(184, 121, 38, 0.16) !important;
+        }
+
+        main > div > p:nth-of-type(1) {
+            color: var(--soft-gold) !important;
+            text-shadow: 0 0.1rem 1rem rgba(244, 199, 93, 0.14);
+        }
+
+        main > div > p:nth-of-type(2) {
+            color: rgba(248, 240, 220, 0.8) !important;
+        }
+
+        main > div > p:nth-of-type(3) {
+            color: var(--paper) !important;
+        }
+
+        main > div > p:nth-of-type(4) {
+            color: #e8c370 !important;
+        }
+
+        main ul {
+            color: rgba(248, 240, 220, 0.92);
+        }
+
+        main li {
+            background: linear-gradient(90deg, rgba(184, 121, 38, 0.14), rgba(184, 121, 38, 0));
+            border-left-color: rgba(244, 199, 93, 0.45);
+            text-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.5);
+        }
+
+        .countdown {
+            color: var(--soft-gold);
+            text-shadow: 0 0 1.25rem rgba(244, 199, 93, 0.38);
+        }
+
+        .premium-gold-cta {
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 36%),
+                linear-gradient(135deg, #60350a 0%, #b87926 24%, #f7d66f 52%, #c48423 78%, #6c3f0b 100%);
+            color: #241404;
+            border-color: rgba(255, 229, 160, 0.68);
+            text-shadow: 0 1px rgba(255, 239, 183, 0.38);
+        }
+
+        .review-proof {
+            position: relative;
+            max-width: 64rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.25rem;
+            border-radius: 1.25rem;
+            background:
+                linear-gradient(135deg, rgba(255, 226, 147, 0.09), transparent 35%),
+                rgba(7, 12, 25, 0.76);
+            border: 0.0625rem solid rgba(244, 199, 93, 0.22);
+            box-shadow:
+                0 1.5rem 3.75rem rgba(0, 0, 0, 0.42),
+                inset 0 0.0625rem 0 rgba(255, 238, 190, 0.1);
+            overflow: hidden;
+        }
+
+        .review-proof::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse at 15% 0%, rgba(37, 211, 102, 0.12), transparent 34%),
+                radial-gradient(ellipse at 85% 100%, rgba(244, 199, 93, 0.13), transparent 31%);
+        }
+
+        .review-proof > * {
+            position: relative;
+        }
+
+        .review-eyebrow {
+            color: var(--whatsapp);
+            letter-spacing: 0.08em;
+        }
+
+        .review-title {
+            color: var(--soft-gold);
+            font-family: 'Playfair Display', 'Hind Siliguri', serif;
+            line-height: 1.28;
+            text-shadow: 0 0.2rem 1.4rem rgba(236, 180, 68, 0.18);
+        }
+
+        .review-copy {
+            color: rgba(248, 240, 220, 0.78);
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .review-video-card {
+            border-radius: 1rem;
+            padding: 0.55rem;
+            background:
+                linear-gradient(160deg, rgba(244, 199, 93, 0.17), rgba(184, 121, 38, 0.06)),
+                rgba(5, 9, 20, 0.86);
+            border: 0.0625rem solid rgba(244, 199, 93, 0.24);
+            box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.34);
+        }
+
+        .review-video-card video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            background: #050914;
+        }
+
+        .review-caption {
+            color: rgba(248, 240, 220, 0.84);
+        }
+
+        .review-caption span {
+            color: var(--soft-gold);
+        }
+
+        .trust-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-top: 1rem;
+            padding: 0.55rem 0.85rem;
+            border-radius: 9999rem;
+            background: rgba(37, 211, 102, 0.1);
+            border: 0.0625rem solid rgba(37, 211, 102, 0.26);
+            color: rgba(235, 255, 242, 0.92);
+        }
+
+        .image-review-proof {
+            background:
+                linear-gradient(135deg, rgba(37, 211, 102, 0.08), transparent 32%),
+                linear-gradient(315deg, rgba(255, 226, 147, 0.1), transparent 36%),
+                rgba(7, 12, 25, 0.78);
+        }
+
+        .image-review-grid {
+            columns: 1;
+            column-gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .image-review-card {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.55rem;
+            border-radius: 1rem;
+            background:
+                linear-gradient(160deg, rgba(255, 245, 204, 0.13), rgba(184, 121, 38, 0.05)),
+                rgba(5, 9, 20, 0.88);
+            border: 0.0625rem solid rgba(244, 199, 93, 0.24);
+            box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.34);
+            break-inside: avoid;
+        }
+
+        .image-review-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            background: #050914;
+        }
+
+        .image-review-card figcaption {
+            color: rgba(248, 240, 220, 0.84);
+        }
+
+        .image-review-card figcaption span {
+            color: var(--soft-gold);
+        }
+
+        body {
+            padding-bottom: calc(8rem + env(safe-area-inset-bottom));
+        }
+
+        .sticky-join-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 60;
+            padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+            background:
+                linear-gradient(135deg, rgba(255, 226, 147, 0.13), transparent 32%),
+                rgba(5, 9, 20, 0.94);
+            border-top: 0.0625rem solid rgba(244, 199, 93, 0.28);
+            box-shadow: 0 -1rem 3rem rgba(0, 0, 0, 0.42);
+            backdrop-filter: blur(1rem);
+        }
+
+        .sticky-join-inner {
+            max-width: 64rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.75rem;
+        }
+
+        .sticky-countdown {
+            margin: 0;
+            padding: 0.8rem 1rem;
+            border-radius: 0.9rem;
+            background: rgba(255, 229, 160, 0.09);
+            border: 0.0625rem solid rgba(244, 199, 93, 0.24);
+            color: var(--soft-gold);
+            font-size: 1rem;
+            line-height: 1.35;
+            text-align: center;
+        }
+
+        .sticky-countdown-label {
+            color: rgba(248, 240, 220, 0.92);
+            font-weight: 700;
+        }
+
+        .sticky-countdown-time {
+            color: var(--soft-gold);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .sticky-join-button {
+            width: 100%;
+            justify-content: center;
+            min-height: 3.5rem;
+        }
+
+        @media (min-width: 40rem) {
+            .image-review-grid {
+                columns: 2;
+            }
+        }
+
+        @media (min-width: 64rem) {
+            .image-review-grid {
+                columns: 3;
+            }
+        }
+
+        @media (min-width: 48rem) {
+            body {
+                padding-bottom: calc(6.5rem + env(safe-area-inset-bottom));
+            }
+
+            .sticky-join-inner {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .sticky-countdown {
+                flex: 1;
+                text-align: left;
+            }
+
+            .sticky-join-button {
+                width: auto;
+                white-space: nowrap;
+            }
+        }
     </style>
 </head>
 
@@ -105,7 +437,7 @@
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">আমাদের এক্সক্লুসিভ WhatsApp কমিউনিটিতে যোগ দিন</h2>
             <a href="./wp-group-ad1-redirection.html">
-                <img src="./wp-group-ad1.png" alt="Join Our Exclusive WhatsApp Community"
+                <img src="./assets/wp-group-ad1.png" alt="Join Our Exclusive WhatsApp Community"
                     class="mx-auto rounded-lg shadow-lg mb-6">
             </a>
             <p class="text-lg md:text-xl font-semibold text-yellow-300 mb-4">প্রতিদিন সঠিক দিশা পেতে আজই যুক্ত হন আমাদের
@@ -122,35 +454,163 @@
             <p class="text-lg font-semibold text-yellow-200 mb-6">বিশ্বাস, ফলাফল ও নিয়মিত গাইডেন্সের জন্য আমাদের উপর
                 আস্থা রাখুন</p>
 
-            <!-- Countdown Timer -->
-            <div class="countdown mb-6" id="countdown">আজকের বিশেষ সুযোগ শেষ হতে বাকি: 01:00:00</div>
+            <section class="review-proof text-left" aria-labelledby="review-proof-title">
+                <div class="text-center">
+                    <p class="review-eyebrow text-sm font-bold uppercase mb-2">Real Client Reviews</p>
+                    <h3 id="review-proof-title" class="review-title text-2xl md:text-3xl font-bold mb-3">
+                        যারা গাইডেন্স পেয়েছেন, তাদের অভিজ্ঞতা শুনুন
+                    </h3>
+                    <p class="review-copy text-base md:text-lg max-w-2xl mx-auto">
+                        আমাদের কমিউনিটির প্রতি মানুষের আস্থা তৈরি হয়েছে নিয়মিত দিশা, সহজ ব্যাখ্যা এবং বাস্তব অভিজ্ঞতার
+                        মাধ্যমে।
+                    </p>
+                    <div class="trust-pill text-sm font-semibold">
+                        Verified review videos from real consultations
+                    </div>
+                </div>
 
-            <script>
-                // Countdown Timer Script
-                const countdownElement = document.getElementById('countdown');
-                let time = 3600; // 1 hour in seconds
+                <div class="review-grid">
+                    <article class="review-video-card">
+                        <video controls playsinline preload="metadata" aria-label="Client review video 1">
+                            <source src="./assets/reviews/videos/client-review1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="review-caption text-sm font-semibold mt-3 text-center"><span>Review 01</span> ·
+                            আস্থার অভিজ্ঞতা</p>
+                    </article>
+                    <article class="review-video-card">
+                        <video controls playsinline preload="metadata" aria-label="Client review video 2">
+                            <source src="./assets/reviews/videos/client-review2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="review-caption text-sm font-semibold mt-3 text-center"><span>Review 02</span> ·
+                            বাস্তব ফলাফল</p>
+                    </article>
+                    <article class="review-video-card">
+                        <video controls playsinline preload="metadata" aria-label="Client review video 3">
+                            <source src="./assets/reviews/videos/client-review3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="review-caption text-sm font-semibold mt-3 text-center"><span>Review 03</span> ·
+                            নিয়মিত গাইডেন্স</p>
+                    </article>
+                    <article class="review-video-card">
+                        <video controls playsinline preload="metadata" aria-label="Client review video 4">
+                            <source src="./assets/reviews/videos/client-review4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="review-caption text-sm font-semibold mt-3 text-center"><span>Review 04</span> ·
+                            সন্তুষ্ট ক্লায়েন্ট</p>
+                    </article>
+                    <article class="review-video-card">
+                        <video controls playsinline preload="metadata" aria-label="Client review video 5">
+                            <source src="./assets/reviews/videos/client-review5.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="review-caption text-sm font-semibold mt-3 text-center"><span>Review 05</span> ·
+                            ভালোবাসার মতামত</p>
+                    </article>
+                    <article class="review-video-card">
+                        <video controls playsinline preload="metadata" aria-label="Client review video 6">
+                            <source src="./assets/reviews/videos/client-review6.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="review-caption text-sm font-semibold mt-3 text-center"><span>Review 06</span> ·
+                            নির্ভরযোগ্য দিশা</p>
+                    </article>
+                </div>
+            </section>
 
-                const updateCountdown = () => {
-                    const minutes = Math.floor(time / 60);
-                    const seconds = time % 60;
-                    countdownElement.textContent = `আজকের বিশেষ সুযোগ শেষ হতে বাকি: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                    time--;
+            <section class="review-proof image-review-proof text-left" aria-labelledby="image-review-proof-title">
+                <div class="text-center">
+                    <p class="review-eyebrow text-sm font-bold uppercase mb-2">Client Message Reviews</p>
+                    <h3 id="image-review-proof-title" class="review-title text-2xl md:text-3xl font-bold mb-3">
+                        মানুষের কথায় আমাদের কাজের প্রমাণ
+                    </h3>
+                    <p class="review-copy text-base md:text-lg max-w-2xl mx-auto">
+                        বাস্তব ক্লায়েন্টদের মেসেজ ও অভিজ্ঞতা নতুন সদস্যদের আস্থা তৈরি করতে সাহায্য করে।
+                    </p>
+                    <div class="trust-pill text-sm font-semibold">
+                        Screenshot reviews shared by satisfied clients
+                    </div>
+                </div>
 
-                    if (time < 0) {
-                        countdownElement.textContent = "আজকের অফার শেষ হয়েছে!";
-                    }
-                };
+                <div class="image-review-grid">
+                    <figure class="image-review-card">
+                        <img src="./assets/reviews/images/review1.jpeg" alt="Client message review screenshot 1"
+                            loading="lazy">
+                        <figcaption class="text-sm font-semibold mt-3 text-center"><span>Message Review 01</span> ·
+                            বিশ্বাসযোগ্য মতামত</figcaption>
+                    </figure>
+                    <figure class="image-review-card">
+                        <img src="./assets/reviews/images/review2.jpeg" alt="Client message review screenshot 2"
+                            loading="lazy">
+                        <figcaption class="text-sm font-semibold mt-3 text-center"><span>Message Review 02</span> ·
+                            সন্তুষ্টির প্রমাণ</figcaption>
+                    </figure>
+                    <figure class="image-review-card">
+                        <img src="./assets/reviews/images/review3.jpeg" alt="Client message review screenshot 3"
+                            loading="lazy">
+                        <figcaption class="text-sm font-semibold mt-3 text-center"><span>Message Review 03</span> ·
+                            ভালো অভিজ্ঞতা</figcaption>
+                    </figure>
+                    <figure class="image-review-card">
+                        <img src="./assets/reviews/images/review4.jpeg" alt="Client message review screenshot 4"
+                            loading="lazy">
+                        <figcaption class="text-sm font-semibold mt-3 text-center"><span>Message Review 04</span> ·
+                            ফলাফলের কথা</figcaption>
+                    </figure>
+                    <figure class="image-review-card">
+                        <img src="./assets/reviews/images/review5.jpeg" alt="Client message review screenshot 5"
+                            loading="lazy">
+                        <figcaption class="text-sm font-semibold mt-3 text-center"><span>Message Review 05</span> ·
+                            আস্থার সম্পর্ক</figcaption>
+                    </figure>
+                    <figure class="image-review-card">
+                        <img src="./assets/reviews/images/review6.jpeg" alt="Client message review screenshot 6"
+                            loading="lazy">
+                        <figcaption class="text-sm font-semibold mt-3 text-center"><span>Message Review 06</span> ·
+                            নিয়মিত দিশা</figcaption>
+                    </figure>
+                </div>
+            </section>
 
-                setInterval(updateCountdown, 1000);
-            </script>
+        </div>
+    </main>
 
-            <!-- Join Button -->
+    <section class="sticky-join-bar" aria-label="Join WhatsApp group offer">
+        <div class="sticky-join-inner">
+            <div class="countdown sticky-countdown" id="countdown" aria-live="polite">
+                <span class="sticky-countdown-label">আজকের বিশেষ সুযোগ শেষ হতে বাকি: </span>
+                <span class="sticky-countdown-time">01:00:00</span>
+            </div>
             <a href="./wp-group-ad1-redirection.html"
-                class="px-8 py-4 premium-gold-cta rounded-xl font-bold text-lg inline-flex items-center gap-3">
+                class="px-8 py-4 premium-gold-cta sticky-join-button rounded-xl font-bold text-lg inline-flex items-center gap-3">
                 এখনই গ্রুপে যুক্ত হোন
             </a>
         </div>
-    </main>
+    </section>
+
+    <script>
+        // Countdown Timer Script
+        const countdownElement = document.getElementById('countdown');
+        let time = 3600; // 1 hour in seconds
+
+        const updateCountdown = () => {
+            const hours = Math.floor(time / 3600);
+            const minutes = Math.floor((time % 3600) / 60);
+            const seconds = time % 60;
+            countdownElement.innerHTML = `<span class="sticky-countdown-label">আজকের বিশেষ সুযোগ শেষ হতে বাকি: </span><span class="sticky-countdown-time">${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}</span>`;
+            time--;
+
+            if (time < 0) {
+                countdownElement.textContent = "আজকের অফার শেষ হয়েছে!";
+            }
+        };
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 
 </html>
